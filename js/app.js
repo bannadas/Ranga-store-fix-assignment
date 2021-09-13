@@ -49,17 +49,14 @@ const getInputValue = (id) => {
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
-  let total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = total;
-  total = total.toFixed(2);
+  const total = convertedOldPrice + convertPrice;
+  document.getElementById(id).innerText = total.toFixed(2);
   updateTotal();
 };
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText =value;
-  value = value.toFixed(2);
-  
+  document.getElementById(id).innerText =value.toFixed(2);
 };
 
 // update delivery charge and total Tax
