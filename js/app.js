@@ -14,11 +14,15 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
+    let productTitle = product.title;
+      var shortTitle = productTitle.slice(0,15);
     div.innerHTML = `<div class="single-product">
       <div>
     <img class="product-image" src=${image}></img>
-      </div>
-      <h3>${product.title}</h3>
+      </div>yh
+      
+      
+      <h2>${product.title}</h2>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       <p><span class="text-danger">Rating: ${product.rating.rate}</span> </p>
